@@ -15,9 +15,6 @@
 
             gtag('config', 'G-1SPK447P8Z');
         </script>
-
-        
-
     </head>
     <body style="margin: 0; font-family: sans-serif; background-color: black; color: white; ">
         <div style="position: relative; width: 100%;">
@@ -43,8 +40,19 @@
                     </script>
                 </div>
                 <p style="margin-top: 1em; font-weight: bold; font-size: 25px; text-shadow: 2px 2px 12px black;">Stay safe out there!</p>
-                <img style="margin-top: 5em;" src='https://www.free-website-hit-counter.com/c.php?d=9&id=178144&s=5' border='0' alt='Free Website Hit Counter', width="400">
+                <p style="margin-bottom: 0.25em; font-weight: bold; font-size: 85px; text-shadow: 2px 2px 12px black;" id="visits">&nbsp;</p>
                 <p style="font-weight: bold; font-size: 20px; text-shadow: 2px 2px 12px black;">Users rescued from brainrot since 2024.</p>
+                <script>
+                    fetch(
+                        'https://api.counterapi.dev/v1/calebwebster.com/visits/up'
+                        )
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data);
+                            document.getElementById('visits').innerText = data.count;
+                        })
+                        .catch(err => console.error(err))
+                </script>
                 <img style="margin-top: 3em;" src="No-Cap-21-09-2024.gif" width="300">
                 <a style="color: white;" href="https://www.textstudio.com/"><p style="margin-top: 10em;">Font generator</p></a>
             </div>
